@@ -30,7 +30,7 @@ const PokeInfo = () => {
     if (hasError) {
         return <div className='error' >
             <h1>The pokemon "{id}" not found </h1>
-            <img src="/public/images/duck1.png" alt="" />
+            <img src="https://e7.pngegg.com/pngimages/435/283/png-clipart-sticker-pokemon-go-telegram-food-pokemon-go-food-human-thumbnail.png" alt="" />
         </div>
     } else {
         return (
