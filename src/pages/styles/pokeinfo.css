@@ -1,0 +1,354 @@
+ 
+.error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10%;
+}
+
+.error img {
+    width: 450px ;
+}
+
+.loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10%;
+}
+
+.loading img {
+    width: 450px ;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: rgb(242, 243, 243);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.info::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 50%;
+    left: 70%;
+    width: 50%;
+    z-index: -1;
+    background-image: url('/public/images/3.svg');
+    background-repeat: no-repeat;
+    background-position: center right;
+    animation: girar 5s linear infinite;
+
+  }
+
+  @keyframes girar {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+.info__card {
+    width: 80%;
+    height: 50%;
+    max-width: 1500px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 1px 1px 5px #000;
+    display: flex;
+    align-items: center;
+}
+
+.info__card-l {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+    margin: 10px;
+    padding: 10px;
+
+}
+
+.info__card-r {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 8%;
+    width: 50%;
+    gap: 1rem;
+    margin: 20px;
+}
+
+.radar {
+    width: 510px;
+    height: 260px;
+}
+
+.info__item {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 10%;
+}
+
+.info__types,
+.info__abilities {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.type,
+.ability {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.type_ability {
+    padding: 5px;
+    margin: 2px;
+    border-radius: 10px;
+    color: white;
+}
+
+.title {
+    font-size: 30px;
+}
+
+.subtitle {
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+.name {
+    font-size: 50px;
+}
+
+hr {
+    border: none;
+    border-top: 2px solid rgba(0, 0, 0, 0.133);
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.2em;
+}
+
+.info__movements {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 1px 1px 5px #000;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+ul.info__movement {
+    height: 100%;
+}
+
+li.movement {
+    display: inline-block;
+    margin: 8px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+@media (max-width: 800px) {
+
+    .info__card {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .info__card-l,
+    .info__card-r {
+        width: 100%;
+    }
+
+    .type,
+    .ability {
+        display: grid;
+    }
+
+    /* .radar {
+        width: 370px;
+        height: 200px;
+    } */
+
+    .title {
+        font-size: 24px;
+    }
+
+    .subtitle {
+        font-size: 15px;
+    }
+
+    .name {
+        font-size: 40px;
+    }
+
+    .info__movements {
+        width: 90%;
+    }
+
+}
+
+
+.bg2-grass {
+    background-color: #2f7a5a;
+}
+
+.bg2-fire {
+    background-color: #E35825;
+}
+
+.bg2-water {
+    background-color: #1479FB;
+}
+
+.bg2-normal {
+    background-color: #BC6B7C;
+}
+
+.bg2-fighting {
+    background-color: #F1613C;
+}
+
+.bg2-ground {
+    background-color: #895C1A;
+}
+
+.bg2-poison {
+    background-color: #A564E3;
+}
+
+.bg2-rock {
+    background-color: #8D8D94;
+}
+
+.bg2-bug {
+    background-color: #3BB039 ;
+}
+
+.bg2-ghost {
+    background-color: #454AA8 ;
+}
+
+.bg2-steal {
+    background-color: #728881;
+}
+
+.bg2-electric {
+    background-color: #eeff00;
+}
+
+.bg2-psychic {
+    background-color: #df0534;
+}
+
+.bg2-ice {
+    background-color: #64CBF5 ;
+}
+
+.bg2-dragon {
+    background-color: #56A4AE;
+}
+
+.bg2-dark {
+    background-color: #0D1211 ;
+}
+
+.bg2-fairy {
+    background-color: #C23867;
+}
+
+
+.bg-grass {
+    background-image: linear-gradient(178.92deg, #7EC6C5 0.92%, #ABDAC6 47.96%, #CAE099 99.08%);
+}
+
+.bg-fire {
+    background-image: linear-gradient(176.37deg, #F96D6F -32.26%, #E35825 22.55%, #E8AE1B 125.72%);
+}
+
+.bg-water {
+    background-image: linear-gradient(179.57deg, #133258 -70.14%, #1479FB 56.16%, #82B2F1 214.85%);
+}
+
+.bg-normal {
+    background-image: linear-gradient(181.51deg, #735259 -6.44%, #BC6B7C 121.95%, #7C3F4C 186.11%);
+}
+
+.bg-fighting {
+    background-image: linear-gradient(176.83deg, #96402A -8.78%, #F1613C 169.09%, #CB735D 242.33%);
+}
+
+.bg-ground {
+    background-image: linear-gradient(179.75deg, #654008 -19.96%, #895C1A 43.67%, #D69638 138.4%);
+}
+
+.bg-poison {
+    background-image: linear-gradient(177.03deg, #5B3184 -11.97%, #A564E3 71.28%, #CE9BFF 135.64%);
+}
+
+.bg-rock {
+    background-image: linear-gradient(177.03deg, #7E7E7E -11.97%, #8D8D94 57.49%, #D3D3D3 135.64%);
+}
+
+.bg-bug {
+    background-image: linear-gradient(177.56deg, #62DB60 -58.92%, #3BB039 16.57%, #AAFFA8 209.53%);
+}
+
+.bg-ghost {
+    background-image: linear-gradient(177.03deg, #323569 -11.97%, #454AA8 57.49%, #787DDA 135.64%);
+}
+
+.bg-steal {
+    background-image: linear-gradient(179.75deg, #5E736C -19.96%, #728881 43.67%, #A8A8A8 138.4%);
+}
+
+.bg-electric {
+    background-image: linear-gradient(176.37deg, #e5ff00 -32.26%, #eeff00 22.55%, #949e09 125.72%);
+}
+
+.bg-psychic {
+    background-image: linear-gradient(181.51deg, #f397a5 -6.44%, #df0534 121.95%, #ff0037 186.11%);
+}
+
+.bg-ice {
+    background-image: linear-gradient(177.03deg, #6FBEDF -11.97%, #64CBF5 47.77%, #BDEBFE 136.72%);
+}
+
+.bg-dragon {
+    background-image: linear-gradient(179.75deg, #478A93 -19.96%, #56A4AE 43.67%, #A2BEC1 138.4%);
+}
+
+.bg-dark {
+    background-image: linear-gradient(177.03deg, #030706 -11.97%, #0D1211 57.49%, #5A5E5D 135.64%);
+}
+
+.bg-fairy {
+    background-image: linear-gradient(179.75deg, #971B45 -19.96%, #C23867 43.67%, #CD7D98 138.4%);
+}

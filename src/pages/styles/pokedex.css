@@ -1,0 +1,164 @@
+.pokedex {
+  /* background-image: url("/public/images/bg1b.jpg"); */
+  background-size: cover;
+  background-position: center;
+  background-color: rgb(242, 243, 243);
+}
+
+.pokedex__title {
+  font-size: 1.5rem;
+  padding-left: 1em;
+  padding-right: 1em;
+  font-weight: 300;
+  margin-bottom: 2em;
+}
+
+.pokedex__title-name {
+  font-weight: 600;
+  color: #FE1936;
+}
+
+.pokedex__nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3em;
+  justify-content: center;
+  max-width: 1800px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.pokedex__form {
+  display: flex;
+  height: 3.5em;
+  
+}
+
+.pokedex__form-input {
+  font-size: 20px;
+  width: 20rem;
+  border-radius: 5px 0px 0px 5px;
+  border: none;
+  box-shadow: 2px 2px 5px 1px rgb(5, 5, 5, 0.5);
+}
+
+.pokedex__form-button {
+  background-color: #DD1A1A;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+  width: 100px;
+  border-radius: 0px 5px 5px 0px;
+  border: none;
+  box-shadow: 2px 2px 1px 1px rgb(5, 5, 5, 0.5);
+}
+.pokedex__form-button:hover{
+  background-color: #f33c54;
+}
+
+.pokedex__nav-buttons {
+  display: flex;
+  gap:5px;
+}
+
+select {
+  background: #DD1A1A;
+  width:  10em;
+  height: 3.5em;
+  padding: 0 .5em;
+  color:#fff;
+  font-weight: bold;
+  cursor:pointer;
+  font-size: 1em;
+  border: none;
+  box-shadow: 2px 2px 5px 1px rgb(5, 5, 5, 0.5);
+}
+
+select:hover {
+  background-color: #f33c54;
+}
+
+.pokedex__container-pokemon {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  justify-content: center;
+  max-width: 1800px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+}
+
+.pokedex__container {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-left: -5px;
+  align-items: center;
+  max-width: 100%;
+  /* overflow-x: auto; */
+}
+
+.page-num {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  border-radius: 50%;
+
+  font-size: 14px;
+  font-weight: bold;
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/b/b1/Pokéball.png');
+  background-size: cover;
+  padding-bottom: 1.5px;
+  cursor: pointer;
+}
+
+.page-num:hover {
+  box-shadow: 2px 2px 5px 1px rgb(5, 5, 5);
+  font-size: 16px;
+}
+
+.active {
+  box-shadow: 2px 2px 5px 1px rgb(5, 5, 5);
+  font-size: 16px;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .pagination {
+    flex-wrap: wrap;
+  }
+
+  .page-num {
+    margin: 3px;
+    font-size: 12px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .active {
+    box-shadow: 2px 2px 5px 1px rgb(5, 5, 5);
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+  }
+
+  .pokedex__form-input {
+    font-size: 20px;
+    width: 15rem;
+    border-radius: 5px 0px 0px 5px;
+    border: none;
+    box-shadow: 2px 2px 5px 1px rgb(5, 5, 5, 0.5);
+  }
+
+
+}
