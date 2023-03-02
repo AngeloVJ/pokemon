@@ -30,7 +30,7 @@ const PokeInfo = () => {
     if (hasError) {
         return <div className='error' >
             <h1>The pokemon "{id}" not found </h1>
-            <img src="/public/images/duck.png" alt="" />
+            <img src="/public/images/duck1.png" alt="" />
         </div>
     } else {
         return (
@@ -38,7 +38,7 @@ const PokeInfo = () => {
                 {isLoading ?
                     <div className='loading'>
                         <h1>Loading...</h1>
-                        <img src="/public/images/run.gif" alt="" />
+                        <img src="/public/images/run1.gif" alt="" />
                     </div>
                     :
                     <>
