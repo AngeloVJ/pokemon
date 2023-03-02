@@ -1,10 +1,9 @@
 import React from 'react'
 import { useEffect, useRef } from 'react';
-import Chart from 'chart.js';
+import Chart from 'chart.js/auto';
 import './styles/radarinfo.css';
-import { useParams } from 'react-router-dom';
 
-const RadarInfo = ({ poke }) => {
+function RadarInfo({ poke }) {
 
     const chartRef = useRef(null);
 
@@ -30,69 +29,62 @@ const RadarInfo = ({ poke }) => {
 
     const color = typeColors[`${poke?.types[0].type.name}`];
 
-    const data = {
-        labels: [
-            `HP: ${poke?.stats[0].base_stat}`,
-            `Attack: ${poke?.stats[1].base_stat}`,
-            `Defense: ${poke?.stats[2].base_stat}`,
-            `S.Attack: ${poke?.stats[3].base_stat}`,
-            `S.Defense: ${poke?.stats[4].base_stat}`,
-            `Speed: ${poke?.stats[5].base_stat}`],
-        datasets: [
-            {
-                label: '',
-                data: [
-                    `${poke?.stats[0].base_stat}`,
-                    `${poke?.stats[1].base_stat}`,
-                    `${poke?.stats[2].base_stat}`,
-                    `${poke?.stats[3].base_stat}`,
-                    `${poke?.stats[4].base_stat}`,
-                    `${poke?.stats[5].base_stat}`],
-                backgroundColor: color,
-                borderColor: 'green',
-                borderWidth: 0,
-                borderOpacity: 0,
-                pointBackgroundColor: false,
-                pointBorderColor: false,
-                pointHoverBackgroundColor: 'red',
-                pointHoverBorderColor: 'red'
-            },
-        ],
-    };
-
     useEffect(() => {
-        const ctx = chartRef.current.getContext('2d');
-
-        new Chart(ctx, {
-            type: 'radar',
-            data: data,
+        const ctx = chartRef.current.getContext("2d");
+        const myChart = new Chart(ctx, {
+            type: "radar",
+            data: {
+                labels: [
+                    `HP: ${poke?.stats[0].base_stat}`,
+                    `Attack: ${poke?.stats[1].base_stat}`,
+                    `Defense: ${poke?.stats[2].base_stat}`,
+                    `S.Attack: ${poke?.stats[3].base_stat}`,
+                    `S.Defense: ${poke?.stats[4].base_stat}`,
+                    `Speed: ${poke?.stats[5].base_stat}`],
+                datasets: [
+                    {
+                        label: "",
+                        data: [
+                            `${poke?.stats[0].base_stat}`,
+                            `${poke?.stats[1].base_stat}`,
+                            `${poke?.stats[2].base_stat}`,
+                            `${poke?.stats[3].base_stat}`,
+                            `${poke?.stats[4].base_stat}`,
+                            `${poke?.stats[5].base_stat}`],
+                        backgroundColor: color,
+                        borderColor: color,
+                        borderWidth: 0,
+                        borderOpacity: 0,
+                        pointBackgroundColor: 0,
+                        pointBorderColor: false,
+                        pointHoverBackgroundColor: color,
+                        pointHoverBorderColor: color
+                    },
+                ],
+            },
             options: {
                 legend: {
                     display: false
                 },
                 scale: {
                     ticks: {
-                        beginAtZero: true,
-                        max: 100,
-                        stepSize: 20,
+                        fontColor: 'red'
                     },
                     pointLabels: {
-                        fontSize: 10.5,
-                        fontFamily: 'Arial',
-                        fontColor: 'black',
-                        fontStyle: 'bold'
-                    },
+                        fontColor: 'red',
+                        fontFamily: 'Arial, sans-serif'
+                    }
                 },
-            },
+            }
         });
-    }, [data]);
-
+        return () => {
+            myChart.destroy();
+        };
+    }, []);
 
     return (
-        <div className='radar'>
-            <canvas ref={chartRef} />
-        </div>
-    )
+        <canvas border="none" ref={chartRef}></canvas>
+    );
 }
 
-export default RadarInfo
+export default RadarInfo;

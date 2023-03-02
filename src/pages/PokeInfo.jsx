@@ -56,7 +56,6 @@ const PokeInfo = () => {
                             <div className='info__card-r'>
                                 <h1 className='title'>Stats</h1>
                                 <RadarInfo className='radar' poke={poke} />
-
                                 <div className='info__item'>
                                     <div className='info__types'>
                                         <h1 className='title'>Tipo</h1>
